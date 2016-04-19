@@ -1,0 +1,148 @@
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+header{
+    height: 60px;
+    background-color: #8EC8FB;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+aside#logo{
+    padding-left: 120px;
+    background-image: url(../../images/logo.png);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+section#utilidades{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+div#opciones{
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+    margin: 0 10px;
+}
+
+div#carrito{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url(../../images/carrito.png);
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    padding: 8px;
+    padding-left: 45px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #8EC8FB;
+}
+
+div#carrito:hover{
+    background-color: #86BCEC;
+    border: 1px solid #75A5D0;
+}
+
+div#cantidad{
+    position: absolute;
+    height: 12px;
+    font-size: 0.5em;
+    top: 0;
+    left: 18px;
+    color: #EF8536;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+div#precioTotal{
+    font-size: 0.7em;
+}
+
+section#contenido{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -ms-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    position: relative;
+}
+
+div#contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+footer{
+    font-size: 0.6em;
+    font-family: Verdana;
+    background-color: #8EC8FB;
+    color: #fff;
+    padding: 2px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+footer > span:last-child{
+    margin-left: 4px;
+}
+
+@media (max-width: 578px){
+    div#contenedor{
+        justify-content: center;
+    }
+    aside#logo>span{
+        display: none;
+    }
+}
+
+@media (max-width: 610px){
+    header{
+        font-size: 20px;
+        height: 40px;
+        padding: 0 10px;
+    }
+
+    aside#logo{
+        font-size: 0.8;
+        padding-left: 80px;
+        line-height: 20px;
+    }
+
+    section#contenido{
+        padding: 5px;
+    }
+}

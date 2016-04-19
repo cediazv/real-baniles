@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                <meta http-equiv="Pragma" content="no-cache" />
+                <meta http-equiv="expires" content="0" />
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <title>Artesanías de Colombia S.A.</title>
+                <link rel="shortcut icon" href="resources/images/favicon.ico" />
+                <link rel="stylesheet" type="text/css" href="resources/css/standard/main.css" />
+                <link rel="stylesheet" type="text/css" href="resources/css/index/main.css" />
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <header>
+                <aside id="logo">
+                    <span>Artesanías de Colombia S.A.</span>
+                </aside>
+                <section id="utilidades">
+                    <div id="opciones">
+                        <a href="#">Ingreso/Registro</a>
+                    </div>
+                    <div id="carrito">
+                        <div id="precioTotal">
+                            $35.500
+                        </div>
+                        <div id="cantidad">
+                            2
+                        </div>
+                    </div>
+                </section>
+            </header>
+            <section id="contenido">
+                <div id="contenedor">
+                    
+                    <ui:repeat value="#{productosView.productos}" var="item">
+
+                        <div class="producto">
+                            <section class="encabezado">
+                                <div class="nombre">#{item.nombre}</div>
+                                <div class="precio">$ #{item.precio}</div>
+                            </section>
+                            <section class="cuerpo">
+                                <section class="imagen">
+                                    <img src="resources/images/products/#{item.imagen}" />
+                                </section>
+                                <section class="contenido">
+                                    <section class="descripcion">
+                                        <div class="texto">
+                                            #{item.descripcion}
+                                        </div>
+                                        <div class="cantidad">
+                                            Cantidad disponibles: <span>#{item.disponibles}</span>
+                                        </div>
+                                    </section>
+                                    <section class="controles">
+                                        <button>Add to cart</button>
+                                    </section>
+                                </section>
+                            </section>
+                        </div>
+                        
+                    </ui:repeat>
+                </div>
+            </section>
+
+            <footer>
+                <span>Copyright &copy; 2016 Real-bañiles S.A.S.</span><span>Mauricio Gutiérrez - José Bermudez - Carlos Rodríguez - Carlos Díaz</span>
+            </footer>
+
+        </h:body>
+
+    </f:view>
+</html>
+
